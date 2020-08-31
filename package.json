@@ -1,0 +1,32 @@
+{
+  "name": "complex-json",
+  "version": "0.1.0",
+  "description": "Access the deep objects inside an object with ease.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vigneshkv23/complex-json.git"
+  },
+  "keywords": [
+    "json",
+    "complexjson",
+    "object",
+    "deep",
+    "get",
+    "set",
+    "del",
+    "value",
+    "key",
+    "value",
+    "objects"
+  ],
+  "author": "vignesh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vigneshkv23/complex-json/issues"
+  },
+  "homepage": "https://github.com/vigneshkv23/complex-json#readme"
+}
