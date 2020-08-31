@@ -14,8 +14,6 @@
 
 > Access the deep objects inside an object with ease.
 
-### 🏠 [Homepage](https://github.com/vigneshkv23/complex-json)
-
 ## Install
 
 ```sh
@@ -65,6 +63,7 @@ var parentObj = "e";
 var res = complexJson.get(json, keys, parentObj);
 
  ```
+ 
 ## SET
  ```
 var json = {
@@ -116,6 +115,7 @@ var parentObj = ["e", "e1"];
 var res = complexJson.set(json, keys, valueToReplace, parentObj);
 
  ```
+ 
  ## DELETE
  ```
 returns modified JSON
@@ -157,6 +157,7 @@ var keys = "f";
 var parentObj = "e";
 var res = complexJson.del(json, keys, parentObj);
  ```
+ 
  ## HAS
  ```
 returns boolean
@@ -196,6 +197,7 @@ var parentObj = "e";
 var res = complexJson.has(json, keys, parentObj);
 
  ```
+ 
  ## GETPATH
  ```
 returns path array 
@@ -246,7 +248,7 @@ var res = complexJson.getPath(json, keys, parentObj);
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/vigneshkv23/complex-json/blob/master/LICENSE). 
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/vigneshkv23/complex-json/issues). 
 
 ## Show your support
 
@@ -257,4 +259,4 @@ Give a ⭐️ if this project helped you!
 </a>
 
 ***
-_complex-json developed with ❤️ _
+complex-json developed with ❤️
