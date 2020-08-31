@@ -1,11 +1,11 @@
 <h1 align="center">Welcome to complex-json 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
-  <a href="--" target="_blank">
+  <a href="https://github.com/vigneshkv23/complex-json/blob/master/README.md" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
   <a href="#" target="_blank">
-    <img alt="License: ISC" src="https://img.shields.io/badge/License-ISC-yellow.svg" />
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
   <a href="https://twitter.com/vigneshkv23" target="_blank">
     <img alt="Twitter: vigneshkv23" src="https://img.shields.io/twitter/follow/vigneshkv23.svg?style=social" />
@@ -14,9 +14,7 @@
 
 > Access the deep objects inside an object with ease.
 
-### 🏠 [Homepage](--)
-
-### ✨ [Demo](--)
+### 🏠 [Homepage](https://github.com/vigneshkv23/complex-json)
 
 ## Install
 
@@ -28,10 +26,12 @@ npm install complex-json -save
 
 ```sh
 var complexJson = require('complex-json');
+```
+
 ## GET:
+```
 returns value
-  
-```var json = {
+var json = {
         "a": {
             "b": "value"
             }
@@ -63,6 +63,7 @@ note:parentObj is non-mandatory, if key has same name is other object parentObj
 var keys = "f";
 var parentObj = "e";
 var res = complexJson.get(json, keys, parentObj);
+
  ```
 ## SET
  ```
@@ -113,6 +114,7 @@ var keys = ["f", "f1"];
 var valueToReplace = ["new f value", "new f1 value"]
 var parentObj = ["e", "e1"];
 var res = complexJson.set(json, keys, valueToReplace, parentObj);
+
  ```
  ## DELETE
  ```
@@ -192,6 +194,7 @@ note: parentObj is non-mandatory, if key has same name is other object
 var keys = "f";
 var parentObj = "e";
 var res = complexJson.has(json, keys, parentObj);
+
  ```
  ## GETPATH
  ```
@@ -232,6 +235,7 @@ var parentObj = "e1";
 var res = complexJson.getPath(json, keys, parentObj);
 ```
 
+
 ## Author
 
 👤 **vignesh**
@@ -239,6 +243,10 @@ var res = complexJson.getPath(json, keys, parentObj);
 * Twitter: [@vigneshkv23](https://twitter.com/vigneshkv23)
 * Github: [@vigneshkv23](https://github.com/vigneshkv23)
 * LinkedIn: [@vigneshkv23](https://linkedin.com/in/vigneshkv23)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/vigneshkv23/complex-json/blob/master/LICENSE). 
 
 ## Show your support
 
@@ -249,4 +257,4 @@ Give a ⭐️ if this project helped you!
 </a>
 
 ***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+_complex-json developed with ❤️ _
