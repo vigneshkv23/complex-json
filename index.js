@@ -83,7 +83,7 @@ exports.get = function (obj, key, parentObj) {
       return "key not found";
     }
     var res = getAll(obj, formattedRes);
-    return res[0]
+    return res
 
   }
   if (parentObj != undefined) {
