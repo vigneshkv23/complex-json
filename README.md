@@ -20,223 +20,49 @@
 npm install complex-json -save
 ```
 
-## Usage
+## Api
 
 ```sh
-var complexJson = require('complex-json');
+get - returns value
+set - returns JSON
+del - returns JSON
+has - returns Boolean 
+getPath - returns path in array format
 ```
 
-## GET:
-```
-returns value
+## Usage:
+```javascript
 var json = {
         "a": {
-            "b": "value"
+            "b": [{
+                "c":"value",
+                "d":"val"
+            }],
+            "b1": [{
+                "c":"value",
+                "d1":"val"
+            }]
             }
         }
-var key = 'b';
-var res = complexJson.get(json, key)
+        
+var complexJson = require('complex-json');  
 
-var json = {
-    "a": {
-        "b": {
-            "c": {
-                "d": [
-                    {
-                        "e": {
-                            "f": "value"
-                        },
-                        "e1": [
-                            {
-                                "f": "value"
-                            }
-                        ]
-                    }]
-            }
-        }
-    }
-}
+// If key is duplicate in any section,It is mandatory pass the third param which is the parent key     
+// If parent key is not passed & duplicate key is present-returns undefied
+complexJson.set(json, 'c', 'newValue' ,'b'); // returns modified json 
 
-note:parentObj is non-mandatory, if key has same name is other object parentObj
-var keys = "f";
-var parentObj = "e";
-var res = complexJson.get(json, keys, parentObj);
+//set accepts key,value in array-can be used to set/change multiple keys at a time
+var keys=['c','d1'];
+var values=['new-c-value','new-d1-value']
+var parentKeys=['b','b1']
+complexJson.set(json, keys, values ,parentKeys); // returns modified json 
 
- ```
- 
-## SET
- ```
-var json = {
-    "a": {
-        "b": "value"
-    }
-}
-
-var key = 'b';
-var valueToReplace = 'newValue';
-var res = complexJson.set(json, key, valueToReplace);
-
-var json = {
-    "a": {
-        "b": {
-            "c": {
-                "d": [
-                    {
-                        "e": {
-                            "f": "value"
-                        },
-                        "e1": [
-                            {
-                                "f1": "value"
-                            }
-                        ]
-                    }]
-            }
-        }
-    }
-}
-
-// set single value
-note: parentObj is non-mandatory, if key has same name is other object
-
-var keys = "f";
-var valueToReplace = "sucess"
-var parentObj = "e";
-
-var res = complexJson.set(json, keys, valueToReplace, parentObj);
-
-// set multiple value at a time
-// array length of keys, valueToReplace, parentObj should be same
-// all the params are mandatory incase of setting multiple values at a time
-
-var keys = ["f", "f1"];
-var valueToReplace = ["new f value", "new f1 value"]
-var parentObj = ["e", "e1"];
-var res = complexJson.set(json, keys, valueToReplace, parentObj);
-
- ```
- 
- ## DELETE
- ```
-returns modified JSON
-
-var json = {
-    "a": {
-        "b": "value",
-        "c": "value",
-    }
-}
-
-var key = 'b';
-var res = complexJson.del(json, key);
-
-var json = {
-    "a": {
-        "b": {
-            "c": {
-                "d": [
-                    {
-                        "e": {
-                            "f": "value",
-                            "g": "value"
-                        },
-                        "e1": [
-                            {
-                                "f1": "value"
-                            }
-                        ]
-                    }]
-            }
-        }
-    }
-}
-
-// del single value
-note:parentObj is non-mandatory, if key has same name is other object parentObj
-var keys = "f";
-var parentObj = "e";
-var res = complexJson.del(json, keys, parentObj);
- ```
- 
- ## HAS
- ```
-returns boolean
-
-var json = {
-    "a": {
-        "b": "value"
-    }
-}
-
-var key = 'b';
-var res = complexJson.has(json, key);
-
-var json = {
-    "a": {
-        "b": {
-            "c": {
-                "d": [
-                    {
-                        "e": {
-                            "f": "value"
-                        },
-                        "e1": [
-                            {
-                                "f1": "value"
-                            }
-                        ]
-                    }]
-            }
-        }
-    }
-}
-
-note: parentObj is non-mandatory, if key has same name is other object
-var keys = "f";
-var parentObj = "e";
-var res = complexJson.has(json, keys, parentObj);
-
- ```
- 
- ## GETPATH
- ```
-returns path array 
-
-var json = {
-    "a": {
-        "b": "value"
-    }
-}
-
-var key = 'b';
-var res = complexJson.getPath(json, key);
-
-var json = {
-    "a": {
-        "b": {
-            "c": {
-                "d": [
-                    {
-                        "e": {
-                            "f": "value"
-                        },
-                        "e1": [
-                            {
-                                "f": "value"
-                            }
-                        ]
-                    }]
-            }
-        }
-    }
-}
-
-note: parentObj is non-mandatory, if key has same name is other object parentObj
-var keys = "f";
-var parentObj = "e1";
-var res = complexJson.getPath(json, keys, parentObj);
+complexJson.has(json, 'c' ,'b'); // returns true
+complexJson.del(json, 'c' ,'b'); // returns modified json
+// If parentKey passed returns specific value/path, If not returns every matched value/path
+complexJson.get(json, 'c', 'b'); // returns 'value'
+complexJson.getPath(json, 'c' ,'b'); // returns array 
 ```
-
 
 ## Author
 
@@ -253,10 +79,6 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 ## Show your support
 
 Give a ⭐️ if this project helped you!
-
-<a href="https://www.patreon.com/vigneshkv23">
-  <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
-</a>
 
 ***
 complex-json developed with ❤️

@@ -36,3 +36,24 @@ var keys = "f";
 var parentObj = "e";
 var res = modifyJson.get(json, keys, parentObj);
 console.log("get single value----", JSON.stringify(res));
+
+
+var json={
+    "a": {
+        "b":[ {
+            "c":"value",
+            "d":"val"
+        }],
+        "b1": [{
+            "c":"value",
+            "d":"val"
+        }]
+        }
+    }
+
+    // parentObj is non-mandatory, if key has same name is other object parentObj
+var keys = "c";
+var parentObj = "b";
+var res = modifyJson.get(json, keys, parentObj);
+console.log("get single value----", JSON.stringify(res));
+
