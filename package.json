@@ -25,7 +25,11 @@
     "value",
     "key",
     "value",
-    "objects"
+    "objects",
+    "jsonpath",
+    "complex-json",
+    "custom-json",
+    "object"
   ],
   "author": "vignesh",
   "license": "MIT",
