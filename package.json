@@ -32,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/vigneshkv23/complex-json/issues"
   },
-  "homepage": "https://github.com/vigneshkv23/complex-json#readme"
+  "homepage": "https://github.com/vigneshkv23/complex-json#readme",
+  "devDependencies": {
+    "eslint": "^7.8.1"
+  }
 }
